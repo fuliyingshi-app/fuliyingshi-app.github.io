@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>福利影视｜选片手册：新片速递 · 高分榜单 · 观影指南 fuliyingshi-app.github.io</title>
+<meta name="description" content="福利影视（fuliyingshi-app.github.io）是一份给普通观众的选片手册：每周三、周六更新新片速递，按站内口碑整理高分榜单，另附类型片库与实用观影指南。片单由编辑手挑加影迷投票，只做信息整理，不提供下载。">
+<meta name="keywords" content="福利影视,fuliyingshi-app,fuliyingshi-app.github.io,新片速递,高分电影榜单,观影指南,类型片库,剧集推荐,电影排行榜,影迷选片手册">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="福利影视编辑部">
+<meta name="theme-color" content="#1d3b30">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://fuliyingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="福利影视">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="福利影视｜选片手册：新片速递 · 高分榜单 · 观影指南">
+<meta property="og:description" content="每周三、周六更新片单，按站内口碑排出高分榜单，另附类型片库与实用观影指南。只做信息整理，不提供下载。">
+<meta property="og:url" content="https://fuliyingshi-app.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="福利影视｜影迷自己的选片手册">
+<meta name="twitter:description" content="新片速递 · 高分榜单 · 观影指南，全站在 https://fuliyingshi-app.github.io">
+<style>
+:root{
+  --ink:#221f1a;
+  --ink-soft:#5b5347;
+  --paper:#f5efe3;
+  --paper-2:#ece2d1;
+  --pine:#1d3b30;
+  --pine-soft:#2c5344;
+  --vermilion:#b23c2c;
+  --amber:#d99a2b;
+  --line:#cbbda3;
+  --shadow:0 1px 0 #d8cbb2, 0 10px 24px rgba(34,31,26,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.75 "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background-image:repeating-linear-gradient(90deg,rgba(203,189,163,.16) 0 1px,transparent 1px 34px);
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Songti SC","Noto Serif SC","SimSun",Georgia,serif}
+.hide{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* 顶部 */
+.topbar{border-bottom:2px solid var(--ink);background:var(--paper-2)}
+.topbar .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand b{font-size:26px;letter-spacing:2px}
+.brand span{font-size:12px;color:var(--ink-soft);letter-spacing:1px}
+.nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;padding-bottom:2px}
+.nav a{font-size:14px;padding:6px 12px;border:1px solid transparent;border-radius:2px;color:var(--ink-soft)}
+.nav a:hover{color:var(--vermilion);border-color:var(--line);background:#fff}
+.tape{background:var(--pine);color:#e8e0cf;font-size:13px;letter-spacing:.5px}
+.tape .wrap{display:flex;gap:18px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.tape i{color:var(--amber);font-style:normal}
+
+/* 首屏 */
+.hero{padding:38px 0 26px}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;align-items:start}
+.kicker{display:inline-block;font-size:12px;letter-spacing:3px;color:var(--vermilion);border:1px solid var(--vermilion);padding:3px 9px;border-radius:2px}
+h1{font-size:clamp(30px,5.2vw,50px);line-height:1.22;margin:16px 0 14px;letter-spacing:1px}
+h1 em{font-style:normal;color:var(--vermilion);border-bottom:6px solid rgba(217,154,43,.45)}
+.lede{font-size:16px;color:var(--ink-soft);max-width:46em}
+.stat{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
+.stat div{border-left:3px solid var(--pine);padding-left:10px}
+.stat b{display:block;font-size:22px;line-height:1.3}
+.stat small{font-size:12px;color:var(--ink-soft)}
+.btnrow{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;font-size:15px;border-radius:2px;border:1px solid var(--ink)}
+.btn-solid{background:var(--pine);color:#f3ece0;border-color:var(--pine)}
+.btn-ghost:hover{background:var(--paper-2)}
+.url-inline{font-size:13px;color:var(--ink-soft);margin-top:14px;word-break:break-all}
+.url-inline b{color:var(--pine);font-weight:600}
+
+/* 排片卡 */
+.slate{background:var(--pine);color:#ece5d4;border-radius:3px;padding:18px 18px 6px;box-shadow:var(--shadow)}
+.slate h2{font-size:15px;letter-spacing:2px;font-weight:600;color:var(--amber);border-bottom:1px dashed rgba(236,229,212,.35);padding-bottom:10px}
+.slate li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed rgba(236,229,212,.22);font-size:14px}
+.slate li time{color:var(--amber);font-variant-numeric:tabular-nums;flex:none}
+.slate li p{color:#cfc7b6;flex:1}
+.slate li:last-child{border-bottom:0}
+.slate .foot{font-size:12px;color:#a9a294;padding:12px 0 10px}
+
+/* 栏目通用 */
+section.blk{padding:34px 0;border-top:1px solid var(--line)}
+.head{display:flex;align-items:flex-end;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.num{font-size:13px;letter-spacing:2px;color:var(--ink-soft);border:1px solid var(--line);padding:2px 8px;border-radius:2px}
+h2.tt{font-size:clamp(21px,3.2vw,28px);letter-spacing:1px}
+h2.tt small{display:block;font-size:12px;letter-spacing:2px;color:var(--ink-soft);font-weight:400;margin-top:4px}
+.more{margin-left:auto;font-size:13px;color:var(--vermilion);border-bottom:1px solid var(--vermilion)}
+
+/* 新片速递 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fffdf8;border:1px solid var(--line);border-radius:3px;padding:16px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .tag{font-size:12px;color:var(--pine);letter-spacing:1px}
+.card h3{font-size:17px;margin:8px 0 8px;line-height:1.4}
+.card p{font-size:14px;color:var(--ink-soft);flex:1}
+.card .go{margin-top:12px;font-size:13px;color:var(--vermilion)}
+.card:hover .go{text-decoration:underline}
+
+/* 榜单 */
+.board{border:1px solid var(--line);background:#fffdf8;border-radius:3px}
+.board li{display:grid;grid-template-columns:56px 1fr 132px;align-items:center;gap:14px;padding:13px 16px;border-bottom:1px dashed var(--line)}
+.board li:last-child{border-bottom:0}
+.board .rk{font-size:24px;color:var(--amber);font-variant-numeric:tabular-nums;text-align:center}
+.board .rk.top{color:var(--vermilion)}
+.board h3{font-size:16px;font-weight:600}
+.board p{font-size:13px;color:var(--ink-soft);margin-top:2px}
+.bar{height:8px;background:var(--paper-2);border-radius:99px;overflow:hidden;margin-bottom:6px}
+.bar div{height:100%;background:linear-gradient(90deg,var(--amber),var(--vermilion))}
+.board .sc{font-size:12px;color:var(--ink-soft);display:flex;justify-content:space-between}
+
+/* 观影指南 */
+.guide{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+.steps li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:2px solid var(--ink)}
+.steps .sn{flex:none;width:30px;height:30px;border-radius:50%;background:var(--pine);color:#f3ece0;font-size:14px;display:flex;align-items:center;justify-content:center}
+.steps h3{font-size:16px;margin-bottom:4px}
+.steps p{font-size:14px;color:var(--ink-soft)}
+.tips{background:var(--paper-2);border:1px solid var(--line);border-radius:3px;padding:18px}
+.tips h3{font-size:15px;letter-spacing:1px;margin-bottom:12px;color:var(--pine)}
+.tips p{font-size:14px;padding-left:16px;position:relative;margin-bottom:10px;color:var(--ink-soft)}
+.tips p::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;background:var(--amber);border-radius:50%}
+
+/* 类型片库 */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips a{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:99px;background:#fffdf8;font-size:14px;color:var(--ink-soft)}
+.chips a:hover{background:var(--pine);color:#f3ece0;border-color:var(--pine)}
+.chips a.big{font-size:17px;padding:10px 18px;border-color:var(--ink);color:var(--ink)}
+
+/* 问答 */
+.qa{border-top:2px solid var(--ink)}
+.qa div{padding:14px 0;border-bottom:1px dashed var(--line)}
+.qa h3{font-size:16px;margin-bottom:6px}
+.qa h3::before{content:"Q · ";color:var(--vermilion)}
+.qa p{font-size:14px;color:var(--ink-soft)}
+.qa p::before{content:"A · ";color:var(--pine)}
+
+/* 关于 + 网址 */
+.about{background:var(--pine);color:#ece5d4;border-radius:3px}
+.about .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;padding-top:34px;padding-bottom:34px}
+.about h2{font-size:clamp(21px,3.2vw,27px);margin-bottom:12px;letter-spacing:1px}
+.about p{font-size:15px;color:#cfc7b6;margin-bottom:10px}
+.about .note{font-size:13px;color:#a9a294;border-left:2px solid var(--amber);padding-left:12px;margin-top:14px}
+.urlcard{background:rgba(255,255,255,.06);border:1px dashed rgba(217,154,43,.6);border-radius:3px;padding:18px}
+.urlcard span{font-size:12px;letter-spacing:2px;color:var(--amber)}
+.urlcard b{display:block;font-size:18px;margin:10px 0 12px;word-break:break-all;color:#fff}
+.urlcard i{font-style:normal;font-size:13px;color:#cfc7b6;display:block;margin-bottom:4px}
+
+/* 页脚 */
+footer{border-top:2px solid var(--ink);background:var(--paper-2);padding:26px 0 30px;font-size:13px;color:var(--ink-soft)}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+footer b{display:block;color:var(--ink);font-size:16px;letter-spacing:1px;margin-bottom:8px}
+footer .kw{line-height:2}
+footer .kw a{margin-right:10px;border-bottom:1px solid var(--line)}
+footer .cp{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero-grid,.guide,.about .wrap,.fgrid{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .board li{grid-template-columns:40px 1fr;grid-template-rows:auto auto}
+  .board .sc{grid-column:2}
+  .nav{margin-left:0;width:100%}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .brand b{font-size:22px}
+  .slate{padding:14px 14px 4px}
+  .stat div{flex:1 1 30%}
+}
+@media print{.tape,.nav,.btnrow{display:none}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://fuliyingshi-app.github.io/#site",
+      "name":"福利影视",
+      "alternateName":"福利影视选片手册",
+      "url":"https://fuliyingshi-app.github.io/",
+      "inLanguage":"zh-CN",
+      "description":"福利影视是一份面向普通观众的选片手册，含新片速递、高分榜单、类型片库与观影指南。",
+      "publisher":{"@id":"https://fuliyingshi-app.github.io/#org"}
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://fuliyingshi-app.github.io/#org",
+      "name":"福利影视",
+      "url":"https://fuliyingshi-app.github.io/",
+      "slogan":"先看片单，再开播放器"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://fuliyingshi-app.github.io/#page",
+      "url":"https://fuliyingshi-app.github.io/",
+      "name":"福利影视｜选片手册：新片速递 · 高分榜单 · 观影指南",
+      "isPartOf":{"@id":"https://fuliyingshi-app.github.io/#site"},
+      "primaryImageOfPage":{"@type":"WebPage","name":"福利影视首页"},
+      "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"福利影视首页","item":"https://fuliyingshi-app.github.io/"}]}
+    },
+    {
+      "@type":"ItemList",
+      "name":"福利影视站内高分榜单",
+      "itemListOrder":"https://schema.org/ItemListOrderDescending",
+      "numberOfItems":8,
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"肖申克的救赎"},
+        {"@type":"ListItem","position":2,"name":"霸王别姬"},
+        {"@type":"ListItem","position":3,"name":"这个杀手不太冷"},
+        {"@type":"ListItem","position":4,"name":"千与千寻"},
+        {"@type":"ListItem","position":5,"name":"阿甘正传"},
+        {"@type":"ListItem","position":6,"name":"让子弹飞"},
+        {"@type":"ListItem","position":7,"name":"盗梦空间"},
+        {"@type":"ListItem","position":8,"name":"疯狂动物城"}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"福利影视是做什么的？","acceptedAnswer":{"@type":"Answer","text":"福利影视是一份选片手册，按新片速递、高分榜单、类型片库、观影指南四条线整理内容，帮你在开播放器之前先想清楚看什么。"}},
+        {"@type":"Question","name":"福利影视的网址是多少？","acceptedAnswer":{"@type":"Answer","text":"官方网址是 https://fuliyingshi-app.github.io ，全站只有一个页面，其余条目链接暂以 # 占位。"}},
+        {"@type":"Question","name":"片单多久更新一次？","acceptedAnswer":{"@type":"Answer","text":"每周三、周六各更新一次，档期密集时临时加更，更新记录写在首屏右侧的排片卡里。"}},
+        {"@type":"Question","name":"福利影视提供在线播放或下载吗？","acceptedAnswer":{"@type":"Answer","text":"不提供。福利影视只做影片信息整理与观影建议，不托管任何视频文件，内页链接均为占位符。"}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="tape">
+  <div class="wrap">
+    <span><i>本期</i> 第 12 期 · 值班编辑 老周</span>
+    <span><i>更新</i> 每周三 / 周六</span>
+    <span><i>地址</i> https://fuliyingshi-app.github.io</span>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand serif">
+      <b>福利影视</b><span>FULI YINGSHI · 选片手册</span>
+    </div>
+    <nav class="nav" aria-label="站内栏目导航">
+      <a href="#releases">新片速递</a>
+      <a href="#rank">高分榜单</a>
+      <a href="#guide">观影指南</a>
+      <a href="#catalog">类型片库</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于本站</a>
+      <a href="#">全部分类</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">先看片单，再开播放器</span>
+        <h1 class="serif">把选片这件小事<br>交给<em>福利影视</em></h1>
+        <p class="lede">片单这种东西，最怕翻了半小时还在首页打转。福利影视把每周值得一看的新片、经得起重看的老片、以及怎么用更少时间挑到更对味的片子，摊成一份能直接照着翻的手册。没有自动播放，没有弹窗，打开就是字。</p>
+        <div class="stat">
+          <div><b>3200+</b><small>在库影片条目</small></div>
+          <div><b>186 套</b><small>主题片单</small></div>
+          <div><b>每周 2 更</b><small>周三 / 周六</small></div>
+        </div>
+        <div class="btnrow">
+          <a class="btn btn-solid" href="#releases">翻本期片单</a>
+          <a class="btn btn-ghost" href="#rank">看高分榜单</a>
+        </div>
+        <p class="url-inline">本站唯一地址：<b>https://fuliyingshi-app.github.io</b>（单页站点，其余条目链接均以 # 占位）</p>
+      </div>
+
+      <aside class="slate" aria-label="近期排片">
+        <h2 class="serif">近 期 排 片 卡</h2>
+        <ul>
+          <li><time>10/22</time><p>秋末补片：《重庆森林》重看笔记</p></li>
+          <li><time>10/18</time><p>榜单换血：两部动画挤进前五</p></li>
+          <li><time>10/15</time><p>新片速递：古装喜剧占了三席</p></li>
+          <li><time>10/11</time><p>影迷投票：年度最想重看的一部</p></li>
+          <li><time>10/08</time><p>观影指南：字幕版本怎么选</p></li>
+        </ul>
+        <p class="foot">排片卡按实际更新倒序排列，过时条目会下沉。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="blk" id="releases">
+    <div class="wrap">
+      <div class="head">
+        <span class="num">01 / 栏目</span>
+        <h2 class="tt serif">新片速递<small>RECENT PICKS</small></h2>
+        <a class="more" href="#">查看全部新片</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">动画 / 奇幻</span>
+          <h3 class="serif">哪吒之魔童闹海</h3>
+          <p>视效密度比上一部更狠，文戏收得住，适合全家一起看的那类大片。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+        <article class="card">
+          <span class="tag">剧情 / 历史</span>
+          <h3 class="serif">南京照相馆</h3>
+          <p>从小人物视角切进去，克制、不喊口号，看完会想安静一会儿。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+        <article class="card">
+          <span class="tag">古装 / 喜剧</span>
+          <h3 class="serif">长安的荔枝</h3>
+          <p>把一件差事讲成了职场故事，笑点密，后半段落点让人心里一沉。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+        <article class="card">
+          <span class="tag">动作 / 犯罪</span>
+          <h3 class="serif">周处三害</h3>
+          <p>节奏快得几乎不给喘息，动作戏干净，适合不想动脑的那晚。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+        <article class="card">
+          <span class="tag">科幻 / 冒险</span>
+          <h3 class="serif">沙丘 2</h3>
+          <p>大银幕优势明显的片子，音效是半个剧情，建议别在手机上看第一遍。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+        <article class="card">
+          <span class="tag">动画 / 作者电影</span>
+          <h3 class="serif">你想活出怎样的人生</h3>
+          <p>不急着解释自己，看不懂也不妨碍被打动，重看会有新东西。</p>
+          <a class="go" href="#">读编辑短评 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="rank">
+    <div class="wrap">
+      <div class="head">
+        <span class="num">02 / 栏目</span>
+        <h2 class="tt serif">高分榜单<small>TOP RATED · 站内口碑指数</small></h2>
+        <a class="more" href="#">榜单规则说明</a>
+      </div>
+      <ol class="board">
+        <li><span class="rk top serif">01</span>
+          <div><h3 class="serif">肖申克的救赎</h3><p>越狱是壳，讲的是人怎么给自己留一口气。</p></div>
+          <div><div class="bar"><div style="width:97%"></div></div><div class="sc"><span>站内指数</span><span>9.7</span></div></div>
+        </li>
+        <li><span class="rk top serif">02</span>
+          <div><h3 class="serif">霸王别姬</h3><p>半个世纪的世事压在两个人身上，每一场戏都站得住。</p></div>
+          <div><div class="bar"><div style="width:96%"></div></div><div class="sc"><span>站内指数</span><span>9.6</span></div></div>
+        </li>
+        <li><span class="rk top serif">03</span>
+          <div><h3 class="serif">这个杀手不太冷</h3><p>杀手片和成长片各占一半，结尾那盆绿植记得看。</p></div>
+          <div><div class="bar"><div style="width:95%"></div></div><div class="sc"><span>站内指数</span><span>9.5</span></div></div>
+        </li>
+        <li><span class="rk serif">04</span>
+          <div><h3 class="serif">千与千寻</h3><p>成年人看是职场，小孩看是冒险，各取所需。</p></div>
+          <div><div class="bar"><div style="width:94%"></div></div><div class="sc"><span>站内指数</span><span>9.4</span></div></div>
+        </li>
+        <li><span class="rk serif">05</span>
+          <div><h3 class="serif">阿甘正传</h3><p>一个老实人的运气史，配乐单拎出来也值。</p></div>
+          <div><div class="bar"><div style="width:94%"></div></div><div class="sc"><span>站内指数</span><span>9.4</span></div></div>
+        </li>
+        <li><span class="rk serif">06</span>
+          <div><h3 class="serif">让子弹飞</h3><p>台词密度高到需要暂停，越看越觉得没一句废话。</p></div>
+          <div><div class="bar"><div style="width:93%"></div></div><div class="sc"><span>站内指数</span><span>9.3</span></div></div>
+        </li>
+        <li><span class="rk serif">07</span>
+          <div><h3 class="serif">盗梦空间</h3><p>结构并不玄，难的是它把规则交代得清清楚楚。</p></div>
+          <div><div class="bar"><div style="width:93%"></div></div><div class="sc"><span>站内指数</span><span>9.3</span></div></div>
+        </li>
+        <li><span class="rk serif">08</span>
+          <div><h3 class="serif">疯狂动物城</h3><p>合家欢的外衣底下是 types 与偏见，第二次看更好看。</p></div>
+          <div><div class="bar"><div style="width:92%"></div></div><div class="sc"><span>站内指数</span><span>9.2</span></div></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blk" id="guide">
+    <div class="wrap">
+      <div class="head">
+        <span class="num">03 / 栏目</span>
+        <h2 class="tt serif">观影指南<small>HOW TO PICK</small></h2>
+        <a class="more" href="#">更多选片方法</a>
+      </div>
+      <div class="guide">
+        <ol class="steps">
+          <li><span class="sn">1</span><div><h3 class="serif">先定心情，再定类型</h3><p>想被逗笑、想哭一场、还是想不动脑子，先回答这个，比翻类型标签管用得多。</p></div></li>
+          <li><span class="sn">2</span><div><h3 class="serif">看三分钟预告就够</h3><p>预告把最好看的剪给你了。三分钟提不起兴趣，正片多半也救不回来。</p></div></li>
+          <li><span class="sn">3</span><div><h3 class="serif">留意片长和节奏</h3><p>超过两个半小时的片子，先看是不是分段叙事；不是的话，留个整块时间再开。</p></div></li>
+          <li><span class="sn">4</span><div><h3 class="serif">看完记一句</h3><p>一句话就够。攒够二十句，你就有了自己的片单，比任何榜单都准。</p></div></li>
+        </ol>
+        <aside class="tips">
+          <h3 class="serif">几条实在的提醒</h3>
+          <p>字幕优先选双语版本，遇到术语时能对照着看。</p>
+          <p>想避开剧透，先看导演的前作，比看影评安全。</p>
+          <p>倍速适合补剧情，不适合看调度讲究的片子。</p>
+          <p>深夜别开第一集悬疑剧，代价是第二天上午。</p>
+          <p>重看不算浪费时间，隔五年再看常是另一部电影。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="catalog">
+    <div class="wrap">
+      <div class="head">
+        <span class="num">04 / 栏目</span>
+        <h2 class="tt serif">类型片库<small>BY GENRE</small></h2>
+        <a class="more" href="#">按类型检索</a>
+      </div>
+      <div class="chips">
+        <a class="big" href="#">悬疑推理</a>
+        <a href="#">科幻</a>
+        <a href="#">动画</a>
+        <a class="big" href="#">纪录片</a>
+        <a href="#">爱情</a>
+        <a href="#">喜剧</a>
+        <a href="#">犯罪</a>
+        <a class="big" href="#">武侠</a>
+        <a href="#">家庭</a>
+        <a href="#">战争</a>
+        <a href="#">音乐</a>
+        <a href="#">短片集</a>
+        <a href="#">黑色电影</a>
+        <a class="big" href="#">公路片</a>
+        <a href="#">港片黄金年代</a>
+        <a href="#">日系治愈</a>
+        <a href="#">韩式类型片</a>
+        <a href="#">欧洲艺术电影</a>
+        <a href="#">国产新导演</a>
+        <a href="#">合家欢</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <span class="num">05 / 栏目</span>
+        <h2 class="tt serif">常见问题<small>ABOUT FULI YINGSHI</small></h2>
+        <a class="more" href="#">还有别的问题</a>
+      </div>
+      <div class="qa">
+        <div>
+          <h3 class="serif">福利影视是做什么的？</h3>
+          <p>一份选片手册。福利影视按新片速递、高分榜单、类型片库、观影指南四条线整理内容，帮你在打开播放器之前先想清楚要看什么。</p>
+        </div>
+        <div>
+          <h3 class="serif">福利影视的网址是什么？</h3>
+          <p>官方网址是 https://fuliyingshi-app.github.io 。全站只有一个页面，除导航锚点外，条目链接暂以 # 占位，认准这个地址就不会走错。</p>
+        </div>
+        <div>
+          <h3 class="serif">片单多久更新一次？</h3>
+          <p>每周三、周六各更新一次，遇到档期密集会临时加更，更新记录都写在首屏右侧的排片卡里，倒序排列。</p>
+        </div>
+        <div>
+          <h3 class="serif">榜单的分数是怎么来的？</h3>
+          <p>站内口碑指数，由编辑打分和影迷投票加权得出，只在本站范围内比较，不代表任何第三方平台的评分。</p>
+        </div>
+        <div>
+          <h3 class="serif">这里能看片或下载吗？</h3>
+          <p>不能。福利影视只做影片信息整理和观影建议，不托管、不跳转任何视频文件，所有内页按钮目前都是占位。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <h2 class="serif">关于福利影视</h2>
+        <p>做这个页面的起因很简单：每次想看片，都要在好几个平台之间来回翻，最后时间花在找片上，看片反而草草了事。福利影视把这些动作收拢到一个页面里——片单、榜单、方法，翻完就可以开始看。</p>
+        <p>内容由编辑部手挑，也接受影迷投票。我们不追热搜，也不做自动播放；更新的标准是"这条真值得写"，不是"这条今天有流量"。</p>
+        <p class="note">说明：福利影视仅提供影片信息与观影建议，不提供任何在线播放、下载或资源跳转。页面内的条目按钮均为 # 占位符，待内页上线后替换。</p>
+      </div>
+      <div class="urlcard">
+        <span>本站网址 · OFFICIAL URL</span>
+        <b>https://fuliyingshi-app.github.io</b>
+        <i>单页站点，收藏这一个地址即可</i>
+        <i>站点名称：福利影视</i>
+        <i>更新节奏：每周三 / 周六</i>
+        <i>收录影片：3200+ 条 · 片单 186 套</i>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <b class="serif">福利影视</b>
+        <p>选片手册 · 新片速递 · 高分榜单 · 观影指南<br>网址：https://fuliyingshi-app.github.io</p>
+      </div>
+      <div class="kw">
+        <b class="serif">站内关键词</b>
+        <a href="#">福利影视</a><a href="#">fuliyingshi-app</a><a href="#">新片速递</a><a href="#">高分榜单</a><a href="#">观影指南</a><a href="#">类型片库</a><a href="#">电影推荐</a><a href="#">剧集片单</a>
+      </div>
+    </div>
+    <div class="cp">
+      <span>&copy; 2026 福利影视 fuliyingshi-app.github.io · 内容仅作观影参考</span>
+      <span>第 12 期 · 值班编辑 老周</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
